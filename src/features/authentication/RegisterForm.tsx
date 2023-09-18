@@ -16,7 +16,7 @@ import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
 import { signup } from '@/services/auth-api';
 import { useNavigate } from 'react-router-dom';
-import { Loader2 } from 'lucide-react';
+
 import ButtonLoader from '@/components/ui/button-loader';
 
 type RegisterFormProps = {
