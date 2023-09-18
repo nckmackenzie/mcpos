@@ -34,3 +34,17 @@ export async function login({ email, password }: SignupProps) {
 
   return data;
 }
+
+export async function getCurrentUser() {
+  const { data: session, error: sessionError } =
+    await supabase.auth.getSession();
+
+  if (sessionError) throw new Error(sessionError.message);
+
+  if (!session.session) return null;
+
+  const { data, error } = await supabase.auth.getUser();
+
+  if (error) throw new Error(error.message);
+  return data?.user;
+}
