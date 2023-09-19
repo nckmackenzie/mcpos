@@ -77,6 +77,9 @@ module.exports = {
       minHeight: {
         dvh: '100dvh',
       },
+      height: {
+        dvh: '100dvh',
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],
