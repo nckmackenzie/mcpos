@@ -26,3 +26,15 @@ export async function createCompany(values: Company) {
 
   return company[0];
 }
+
+export async function getCompany(id: string) {
+  const { error, data: company } = await supabase
+    .from('companies')
+    .select('*')
+    .eq('id', id)
+    .single();
+
+  if (error) throw new Error(error.message);
+
+  return company;
+}
