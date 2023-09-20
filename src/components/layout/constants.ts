@@ -55,7 +55,7 @@ export const NAVITEMS = [
   {
     label: 'Messages',
     icon: MessagesSquareIcon,
-    to: '/expenses',
+    to: '/messages',
   },
   {
     label: 'Settings',
