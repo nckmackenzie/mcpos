@@ -1,7 +1,16 @@
+import { useCompany } from '@/features/company/useCompany';
+// import { useQueryClient } from '@tanstack/react-query';
+
 export default function Aside() {
+  const { company } = useCompany();
   return (
-    <aside className="hidden h-full md:flex md:flex-col md:fixed md:inset-y-0 z-[80] bg-gray-100 dark:bg-slate-900 w-72 border-r">
-      Hello from sidebar
+    <aside>
+      <header className="h-20 border-b flex flex-col items-center justify-center">
+        <h1 className="text-xl md:text-3xl font-bold">McPos</h1>
+        <p className="text-muted-foreground">
+          {company?.companyName || 'Company Name'}
+        </p>
+      </header>
     </aside>
   );
 }
