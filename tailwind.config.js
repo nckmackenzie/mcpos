@@ -81,6 +81,16 @@ module.exports = {
         dvh: '100dvh',
       },
     },
+    fontFamily: {
+      sans: [
+        'Montserrat',
+        'ui-sans-serif',
+        'system-ui',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'sans-serif',
+      ],
+    },
   },
   plugins: [require('tailwindcss-animate')],
 };
